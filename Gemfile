@@ -3,6 +3,8 @@ source "https://rubygems.org"
 ruby "3.3.0"
 
 gem 'vite_rails'
+gem 'graphql', '~> 2.0.16'
+gem 'graphiql-rails', group: :development
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"

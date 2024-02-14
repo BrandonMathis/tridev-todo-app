@@ -19,11 +19,6 @@ const GET_TODO_LISTS = gql`
     todoLists {
       id
       title
-      todoItems {
-        id
-        text
-        completed
-      }
     }
   }
 `;

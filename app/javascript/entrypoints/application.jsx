@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { HttpLink } from '@apollo/client';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -9,8 +10,19 @@ import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client
 import AllTodoLists from 'components/AllTodoLists';
 import TodoList from 'components/TodoList';
 
+const csrfToken = document
+  .querySelector('meta[name="csrf-token"]')
+  .getAttribute('content');
+
+const link = new HttpLink({
+  uri: "http://localhost:3000/graphql",
+    headers: {
+    'X-CSRF-Token': csrfToken,
+  },
+});
+
 const client = new ApolloClient({
-  uri: 'http://localhost:3000/graphql',
+  link,
   cache: new InMemoryCache(),
 });
 

@@ -1,9 +1,9 @@
 module Types
   class QueryType < Types::BaseObject
-    field :todos, [Types::TodoItemType], null: false, description: "Returns a list of todos"
+    field :todo_lists, [Types::TodoListType], null: false, description: "Returns a list of todos"
 
-    def todos
-      TodoItem.all
+    def todo_lists
+      TodoList.all
     end
   end
 end

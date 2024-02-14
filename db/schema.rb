@@ -25,6 +25,4 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_14_154032) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  add_foreign_key "todo_items", "todo_lists"
 end

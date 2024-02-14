@@ -1,11 +1,9 @@
 import React from 'react';
 
-function App() {
+export default function TodoList() {
   return (
     <div>
-      <h1>Hello, World!</h1>
+      <h1>TODO List</h1>
     </div>
   );
 }
-
-export default App;

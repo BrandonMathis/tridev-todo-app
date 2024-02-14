@@ -5,6 +5,6 @@ module Types
     field :id, ID, null: false
     field :title, String, null: false
 
-    field :todos, [Types::TodoItemType], null: true
+    field :todo_items, [Types::TodoItemType], null: true
   end
 end

@@ -5,7 +5,9 @@ module Mutations
     field :todo_list, Types::TodoListType, null: false
 
     def resolve(title:)
-      TodoList.create!(title: title)
+      todo_list = TodoList.create!(title: title)
+
+      { todo_list: todo_list }
     end
   end
 end
